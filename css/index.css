@@ -27,7 +27,9 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+
 }
+
 body {
 	line-height: 1;
 }
@@ -69,30 +71,80 @@ h1, h2, h3, h4, h5, h6, p, a, i {
 
 h1 {
     font-size: 7.5rem;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 h2 {
     font-size: 6rem;
+    font-family:'Roboto', sans-serif;
+    color:white;
+    font-weight: bold;
+    text-align: center;
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 p, a {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 /* header section */
 header {
     width: 100%;
     height: 100vh;
-    background-image: url('../img/home-header.jpg');
+    background-image:url(/img/home-header.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  
+}
+.header-content {
+    background-color: rgb(0, 4, 17, .8);
+    width:auto;
+    height: auto;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin:20px 120px 1px 110px;
 }
 
+.icons {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 5px 450px;
+    padding:10px;
+}
+.fa-square-facebook{
+    
+   color: rgba(255, 255, 255, 0.795);
+    border-radius:5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.fa-square-twitter {
+    color: rgba(255, 255, 255, 0.795);
+    border-radius:5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    
+}
+.fa-square-instagram {
+    color: rgba(255, 255, 255, 0.795);
+    border-radius:5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
 /* spacers */
 .spacer {
     width: 100%;
@@ -108,11 +160,27 @@ header {
 /* gallery section */
 .gallery {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     background-color: rgb(0, 4, 17);
 }
 
+.foods {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-basis:33%;
+}
+.food {
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    height:30%;
+    
+}
+
+  
 /* about us section */
 .about {
     width: 100%;
@@ -135,10 +203,13 @@ header {
 
 .about h2 {
     width: 100%;
+    color:white;
+    
 }
 
 .about-container .text {
     width: 50%;
+    color:white;
 }
 
 /* contact us section */
@@ -163,10 +234,15 @@ header {
 
 .contact h3 {
     padding-top: 2.5vh;
+    color:white;
+}
+#phone, #email {
+    color:white;
 }
 
 .contact p {
     padding: .5vh 0;
+    color:white;
 }
 
 .info {
@@ -191,21 +267,54 @@ header {
 /* footer section */
 footer {
     width: 100%;
-    height: 15vh;
+    height: 30vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: black;
+    display:flex;
+    justify-content: flex-start;
+}
+h4 {
+    color:white;
+    font-weight: bold;
+    font-size:30px;
+}
+button, input {
+    font-size:20px;
+}
+.copyright {
+    color:white;
+    font-size:20px;
+    display: flex;
+    align-items: flex-end;
 }
 
 /* mobile media query */
 @media (max-width: 428px) {
+
     /* header section */
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    nav a {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
     
 
     /* gallery section */
     .gallery {
         height: auto;
     }
-    
+    .foods {
+        display:flex;
+        flex-direction: column;
+    }
     /* about us section */
 
     .about {
@@ -249,5 +358,22 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .footer h4 {
+        font-size:1em;
+        text-align: center;
+    }
+    .footer nav a {
+        display:flex;
+        flex-direction: column;
+    }
+    .copyright {
+        font-size: 0.6em;
     }
 }
